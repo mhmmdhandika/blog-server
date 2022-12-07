@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <%- include('../partials/nav.ejs') %>
+    <main>
+      <h1>Add a new blog</h1>
+      <form action="/blogs/add-new" method="POST">
+        <div class="row mb-3">
+          <label for="title" class="col-sm-2 col-form-label">Title</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              id="text"
+              name="title"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="snippet" class="col-sm-2 col-form-label">Snippet</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              id="snippet"
+              name="snippet"
+              required
+            />
+          </div>
+        </div>
+        <div class="row mb-3">
+          <label for="body" class="col-sm-2 col-form-label">Body</label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control"
+              id="body"
+              name="body"
+              required
+            />
+          </div>
+        </div>
+        <a href="/blogs" class="btn btn-secondary">Back</a>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </main>
+    <%- include('../partials/footer.ejs') %> <%-
+    include('../partials/bootstrap-script.ejs') %>
+  </body>
+</html>

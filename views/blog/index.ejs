@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs') %>
+  <body>
+    <%- include('../partials/nav.ejs') %> <% if (blogs.length > 0) { %>
+    <main>
+      <% blogs.forEach(blog => { %>
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title"><%- blog.title %></h3>
+          <p class="card-text"><%- blog.snippet %></p>
+          <a href="/blogs/<%- blog.id %> " class="btn btn-primary">Details</a>
+        </div>
+      </div>
+      <% }) %> <% } else { %>
+      <p>You were not have a blog at all</p>
+      <% } %>
+    </main>
+    <%- include('../partials/footer.ejs') %> <%-
+    include('../partials/bootstrap-script.ejs') %>
+  </body>
+</html>
